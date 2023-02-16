@@ -1,16 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 
-const { fontFamily } = require("tailwindcss/defaultTheme");
+const defaultTheme = require("tailwindcss/defaultTheme");
+// const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      xs: "475px",
+      ...defaultTheme.screens,
+    },
     extend: {
-      fontFamily: {
-        //lobster: ["var(--font-lobster)"],
-        test: ["var(--font-lobster)", ...fontFamily.sans],
-        notoSans: ["var(--font-notoSans)"],
-      },
+      // fontFamily: {
+      //   notoSans: ["var(--font-notoSans)"],
+      // },
     },
   },
   plugins: [],
