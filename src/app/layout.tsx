@@ -1,5 +1,7 @@
+"use client";
 import "./globals.css";
 import Nav from "../components/Nav";
+import { ThemeProvider } from "next-themes";
 
 export default function RootLayout({
   children,
@@ -14,8 +16,10 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        <Nav />
-        {children}
+        <ThemeProvider enableSystem={true} attribute="class">
+          <Nav />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
