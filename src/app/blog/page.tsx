@@ -1,3 +1,6 @@
+import { Suspense } from "react";
+import Loading from "./loading";
+
 const fetchFromNotion = async () => {
   const res = await fetch("http://localhost:3000/api/notion");
   const data = await res.json();
@@ -9,15 +12,17 @@ export default async function Blog() {
 
   return (
     <div>
-      {rows.map((row) => {
-        return (
-          <div key={row.name}>
-            <h1>{row.name}</h1>
-            <p>{row.first_name}</p>
-            <p>{row.url}</p>
-          </div>
-        );
-      })}
+      <Suspense fallback={<Loading />}>
+        {rows.map((row) => {
+          return (
+            <div key={row.name}>
+              <h1>{row.name}</h1>
+              <p>{row.first_name}</p>
+              <p>{row.url}</p>
+            </div>
+          );
+        })}
+      </Suspense>
     </div>
   );
 }
