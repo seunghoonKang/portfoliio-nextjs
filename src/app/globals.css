@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .hoverNavItem {
+    @apply hover:bg-cyan-500 hover:ease-in hover:duration-200 hover:rounded-full p-1 hover:text-white;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;

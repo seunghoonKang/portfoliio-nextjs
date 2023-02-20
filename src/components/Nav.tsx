@@ -28,23 +28,31 @@ export default function Nav() {
   }, []);
 
   return (
-    <nav className="sticky top-[0]">
+    <nav className="sticky top-[0] z-50 ">
       <ul
         className={`${
-          show && "bg-slate-100 text-slate-500 dark:opacity-50"
-        } xs:text-sm md:text-lg h-14 flex items-center justify-end gap-7 pr-6 z-10 transition-all  `}
+          show && "bg-slate-100 text-slate-500 z-50 dark:opacity-50"
+        } xs:text-sm md:text-lg h-14 flex items-center justify-end gap-7 pr-6 z-50 transition-all  `}
       >
         <li className="cursor-pointer">
-          <a href="/">홈</a>
+          <a href="/">
+            <div className="hoverNavItem">홈</div>
+          </a>
         </li>
         <li className="cursor-pointer">
-          <a href="#portfolio">포트폴리오</a>
+          <a href="#portfolio">
+            <div className="hoverNavItem">포트폴리오</div>
+          </a>
         </li>
         <li className="cursor-pointer">
-          <a href="#about">소개</a>
+          <a href="#about">
+            <div className="hoverNavItem">소개</div>
+          </a>
         </li>
         <li className="cursor-pointer">
-          <a href="#experience">경험</a>
+          <a href="#experience">
+            <div className="hoverNavItem">경험</div>
+          </a>
         </li>
 
         {currentTheme === "dark" ? (
