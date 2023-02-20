@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import Loading from "./loading";
 
 const fetchFromNotion = async () => {
-  const res = await fetch("http://localhost:3000/api/notion");
+  const res = await fetch("/api/notion");
   const data = await res.json();
   return JSON.parse(data);
 };
