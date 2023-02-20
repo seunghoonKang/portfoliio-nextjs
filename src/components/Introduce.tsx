@@ -13,11 +13,8 @@ export default function Introduce() {
           />
         </div>
         <div className="flex items-center justify-center">
-          <h1 className="md:text-xl lg:text-2xl">
-            <span className="font-bold">
-              새로운 것을 배우고, 꾸준한 성장을 추구하는
-            </span>{" "}
-            <br />
+          <h1 className="sm:text-3xl md:text-xl lg:text-2xl text-center font-bold">
+            안녕하세요! <br />
             프론트엔드 개발자 강승훈입니다.
           </h1>
         </div>
