@@ -15,7 +15,7 @@ export default function Portfolio() {
     {
       projectName: "Portfoilo",
       description:
-        "개인 포트폴리오 사이트로, 포트폴리오를 깔끔하게 소개하고 싶어 제작하였습니다. NextJS와 Typescript와 조금 더 친숙해지려 시작하였으며, 계속 개선중입니다.",
+        "개인 포트폴리오 사이트로, 포트폴리오를 깔끔하게 소개하고 싶어 제작하였습니다. NextJS, Typescript와 조금 더 친숙해지려 시작하였으며, 계속 개선중입니다.",
       techStack: ["React", "TypeScript", "NextJS", "Tailwind"],
       period: "2023.01~",
       image: "/portfolio.png",
@@ -28,7 +28,7 @@ export default function Portfolio() {
       techStack: ["React", "Tailwind", "WebRTC(Openvidu)", "Socket.io"],
       period: "2022.11 ~ 2022.12",
       image: "/we-all-lion.png",
-      github: "https://github.com/seunghoonKang",
+      github: "https://github.com/seunghoonKang/we-all-lie-fe",
       keyId: 2,
     },
   ];
@@ -36,7 +36,7 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className=" mt-20">
       <div className=" my-12 pb-12 md:pt-16 md:pb-48">
-        <h1 className="text-center font-extrabold text-4xl ">
+        <h1 className="text-center font-extrabold text-4xl mb-24">
           포트폴리오
           <hr className="w-10 h-1 mx-auto my-4 bg-cyan-500 border-0 rounded"></hr>
         </h1>
