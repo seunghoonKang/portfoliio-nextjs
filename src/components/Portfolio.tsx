@@ -19,7 +19,7 @@ export default function Portfolio() {
       techStack: ["React", "TypeScript", "NextJS", "Tailwind"],
       period: "2023.01~",
       image: "/portfolio.png",
-      github: "https://github.com/seunghoonKang",
+      github: "https://github.com/seunghoonKang/portfoliio-nextjs",
       keyId: 1,
     },
     {
