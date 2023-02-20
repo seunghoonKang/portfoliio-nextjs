@@ -31,17 +31,12 @@ export default function Nav() {
     <nav className="sticky top-[0] z-50 ">
       <ul
         className={`${
-          show && "bg-slate-100 text-slate-500 z-50 dark:opacity-50"
+          show && "bg-slate-100 text-slate-500 z-50 dark:opacity-80"
         } xs:text-sm md:text-lg h-14 flex items-center justify-end gap-7 pr-6 z-50 transition-all  `}
       >
         <li className="cursor-pointer">
-          <a href="/">
+          <a href="#home">
             <div className="hoverNavItem">홈</div>
-          </a>
-        </li>
-        <li className="cursor-pointer">
-          <a href="#portfolio">
-            <div className="hoverNavItem">포트폴리오</div>
           </a>
         </li>
         <li className="cursor-pointer">
@@ -50,11 +45,15 @@ export default function Nav() {
           </a>
         </li>
         <li className="cursor-pointer">
+          <a href="#portfolio">
+            <div className="hoverNavItem">포트폴리오</div>
+          </a>
+        </li>
+        <li className="cursor-pointer">
           <a href="#experience">
             <div className="hoverNavItem">경험</div>
           </a>
         </li>
-
         {currentTheme === "dark" ? (
           <li>
             <button onClick={() => setTheme("light")} className=" p-1">

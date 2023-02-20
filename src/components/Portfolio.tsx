@@ -15,7 +15,7 @@ export default function Portfolio() {
     {
       projectName: "Portfoilo",
       description:
-        "개인 포트폴리오 사이트로, 포트폴리오를 깔끔하게 소개하고 싶어 제작하였습니다. NextJS, Typescript와 조금 더 친숙해지려 시작하였으며, 계속 개선중입니다.",
+        "개인 포트폴리오 사이트로, 포트폴리오를 깔끔하게 소개하고 싶고, 더불어 NextJS, Typescript와 조금 더 친숙해지려 시작하였습니다. 계속 개선중입니다.",
       techStack: ["React", "TypeScript", "NextJS", "Tailwind"],
       period: "2023.01~",
       image: "/portfolio.png",
