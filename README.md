@@ -1,38 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 포트폴리오 만들기 (ver 0.1.0)
 
-## Getting Started
+![](https://i.imgur.com/bcKNF5L.png)
 
-First, run the development server:
+## 동기
+ 깔끔한 포트폴리오 페이지 작성을 하고 싶었고, NextJS 와 타입스크립트를 같이 공부하려 만들었습니다.
+ 
 
-```bash
+## 진행기간
+ `2023.01` ~ 진행중
+
+
+## 프로젝트 진행
+**기준**
+- Mobile First (반응형)
+
+**최소조건**
+- 전체 기본 형태 구현하기
+    - 포트폴리오
+    - 소개
+    - 경험
+
+**추가 예정 기능**
+
+ - [x] 다크모드
+ - [ ] 포트폴리오 상세 내용
+ - [ ] 노션 API 사용
+ - [ ] 다양한 모션
+ - [ ] 블로그
+
+## 기술 스택
+<img alt="NextJS" src ="https://img.shields.io/badge/Next.js-000000?&style=flat&logo=Next.js&logoColor=white"/> <img alt="TypeScript" src ="https://img.shields.io/badge/TypeScript-3178C6?&style=flat&logo=TypeScript&logoColor=white"/>
+<img alt="Tailwind CSS" src ="https://img.shields.io/badge/Tailwind CSS-06B6D4?&style=flat&logo=Tailwind&logoColor=white"/>
+<img alt="Vercel" src ="https://img.shields.io/badge/Vercel-000000?&style=flat&logo=Vercel&logoColor=white"/>
+
+</br>
+
+## 데모 영상
+
+![portfolio-entire](https://user-images.githubusercontent.com/59612529/221880810-f9956534-2a3c-4dbe-b656-742c04637df0.gif)
+
+
+## 실행 방법
+
+- 모듈 설치
+```tsx
+npm install
+```
+- 실행
+```tsx
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 배포 환경
+```tsx
+npm build
+npm stard
+```
