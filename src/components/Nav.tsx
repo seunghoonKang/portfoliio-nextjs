@@ -25,7 +25,7 @@ export default function Nav() {
 
   useEffect(() => {
     setTheme("system");
-  }, []);
+  }, [setTheme]);
 
   return (
     <nav className="sticky top-[0] z-50 ">
