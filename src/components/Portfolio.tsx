@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsFillArrowUpRightCircleFill } from "react-icons/bs";
 export default function Portfolio() {
   interface Project {
     projectName: string;
@@ -9,9 +9,21 @@ export default function Portfolio() {
     period: string;
     image: string;
     github: string;
+    deploySite?: string;
     keyId: number;
   }
   const projects: Project[] = [
+    {
+      projectName: "나랑 벚꽃 보러 가지 않을래",
+      description:
+        "연인, 친구, 가족에게 벚꽃 초대장 메시지를 전달하는 서비스입니다. 단순히 놀러가자는 것에서 그치지 않고 벚꽃 보러 가기 전부터 설렘을 주기 위해 기획하게 되었습니다.",
+      techStack: ["NextJS", "TypeScript", "Tailwind"],
+      period: "2023.03",
+      image: "/cherryblossom.png",
+      github: "https://github.com/Teo-Sprint-14th-1team/cherryblossom",
+      deploySite: "https://cherryblossom-ten.vercel.app/",
+      keyId: 1,
+    },
     {
       projectName: "Portfoilo",
       description:
@@ -20,7 +32,8 @@ export default function Portfolio() {
       period: "2023.01~",
       image: "/portfolio.png",
       github: "https://github.com/seunghoonKang/portfoliio-nextjs",
-      keyId: 1,
+      deploySite: "https://portfolio-seunghoonkang.vercel.app/",
+      keyId: 2,
     },
     {
       projectName: "Like a Lion",
@@ -29,7 +42,7 @@ export default function Portfolio() {
       period: "2022.11 ~ 2022.12",
       image: "/we-all-lion.png",
       github: "https://github.com/seunghoonKang/we-all-lie-fe",
-      keyId: 2,
+      keyId: 3,
     },
   ];
 
@@ -71,10 +84,17 @@ export default function Portfolio() {
                 <p className="sm:text-lg md:text-sm leading-7 text-neutral-600 dark:text-neutral-400">
                   {project.description}
                 </p>
-                <div className="mt-4">
+                <div className="mt-4 flex gap-5">
                   <Link href={project.github}>
                     <BsGithub size={30} />
                   </Link>
+                  {project.deploySite ? (
+                    <Link href={project.deploySite}>
+                      <BsFillArrowUpRightCircleFill size={30} />
+                    </Link>
+                  ) : (
+                    <></>
+                  )}
                 </div>
               </div>
             </div>
