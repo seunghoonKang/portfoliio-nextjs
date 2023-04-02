@@ -2,11 +2,11 @@ export default function About() {
   return (
     <section id="about">
       <div className=" my-12 pb-12 md:pt-16 md:pb-12 ">
-        <h1 className="text-center font-extrabold text-4xl mb-24">
+        <h1 className="mb-24 text-center text-4xl font-extrabold">
           소개
-          <hr className="w-10 h-1 mx-auto my-4 bg-cyan-500 border-0 rounded"></hr>
+          <hr className="mx-auto my-4 h-1 w-10 rounded border-0 bg-cyan-500"></hr>
         </h1>
-        <div className="text-center flex flex-col gap-12">
+        <div className="flex flex-col gap-12 text-center">
           <div>
             <p className="text-2xl font-bold">
               <span className=" text-cyan-600">꾸준한 배움과 성장</span>을 통해

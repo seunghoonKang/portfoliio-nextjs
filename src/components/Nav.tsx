@@ -31,8 +31,8 @@ export default function Nav() {
     <nav className="sticky top-[0] z-50 ">
       <ul
         className={`${
-          show && "bg-slate-100 text-slate-500 z-50 dark:opacity-80"
-        } xs:text-sm md:text-lg h-14 flex items-center justify-end gap-7 pr-6 z-50 transition-all  `}
+          show && "z-50 bg-slate-100 text-slate-500 dark:opacity-80"
+        } z-50 flex h-14 items-center justify-end gap-7 pr-6 transition-all xs:text-sm md:text-lg  `}
       >
         <li className="cursor-pointer">
           <a href="#home">
@@ -68,7 +68,7 @@ export default function Nav() {
           <li>
             <button
               onClick={() => setTheme("dark")}
-              className=" p-1 bg-slate-100 rounded-xl"
+              className=" rounded-xl bg-slate-100 p-1"
               aria-label="Change from Light Mode to Dark Mode"
             >
               <RiMoonFill size={15} />
