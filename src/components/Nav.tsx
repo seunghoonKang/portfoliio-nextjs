@@ -56,7 +56,11 @@ export default function Nav() {
         </li> */}
         {currentTheme === "dark" ? (
           <li>
-            <button onClick={() => setTheme("light")} className=" p-1">
+            <button
+              onClick={() => setTheme("light")}
+              className=" p-1"
+              aria-label="Change from Dark Mode to Light Mode"
+            >
               <BsFillSunFill size={15} />
             </button>
           </li>
@@ -65,6 +69,7 @@ export default function Nav() {
             <button
               onClick={() => setTheme("dark")}
               className=" p-1 bg-slate-100 rounded-xl"
+              aria-label="Change from Light Mode to Dark Mode"
             >
               <RiMoonFill size={15} />
             </button>

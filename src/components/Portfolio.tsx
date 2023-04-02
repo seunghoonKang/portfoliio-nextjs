@@ -85,11 +85,14 @@ export default function Portfolio() {
                   {project.description}
                 </p>
                 <div className="mt-4 flex gap-5">
-                  <Link href={project.github}>
+                  <Link href={project.github} aria-label="github Link">
                     <BsGithub size={30} />
                   </Link>
                   {project.deploySite ? (
-                    <Link href={project.deploySite}>
+                    <Link
+                      href={project.deploySite}
+                      aria-label="deployed site Link"
+                    >
                       <BsFillArrowUpRightCircleFill size={30} />
                     </Link>
                   ) : (
