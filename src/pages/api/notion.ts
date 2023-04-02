@@ -22,10 +22,10 @@ export default async function handler(
   const query = await notion.databases.query({
     database_id: notionDatabaseId,
   });
-  console.log(query);
+
   //@ts-ignore
   const rows = query.results.map((res) => res.properties) as Row[];
-  // const test = query.results.map((res) => console.log(res));
+
   // test;
   const rowsStructured: rowStructured = rows.map((row) => ({
     name: row.name.title[0].text.content,

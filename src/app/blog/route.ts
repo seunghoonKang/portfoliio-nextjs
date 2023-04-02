@@ -10,11 +10,12 @@ export const fetchFromNotion = async () => {
   });
   //@ts-ignore
   const rows = response.results.map((res) => res.properties) as Row[];
-  // const test = query.results.map((res) => console.log(res));
+
   const rowsStructured: rowStructured = rows.map((row) => ({
     name: row.name.title[0].text.content,
     first_name: row.first_name.rich_text?.[0].text.content,
     url: row.link_to_youtube.url,
   }));
+
   return rowsStructured;
 };

@@ -49,11 +49,11 @@ export default function Nav() {
             <div className="hoverNavItem">포트폴리오</div>
           </a>
         </li>
-        <li className="cursor-pointer">
+        {/* <li className="cursor-pointer">
           <a href="#experience">
             <div className="hoverNavItem">경험</div>
           </a>
-        </li>
+        </li> */}
         {currentTheme === "dark" ? (
           <li>
             <button onClick={() => setTheme("light")} className=" p-1">
