@@ -30,5 +30,5 @@ export const fetchFromNotion = async () => {
   const blockChildData = await notion.blocks.children.list({
     block_id: pageId,
   });
-  console.log(blockChildData.results.map((res) => res.type));
+  return blockChildData.results.map((res) => res);
 };
