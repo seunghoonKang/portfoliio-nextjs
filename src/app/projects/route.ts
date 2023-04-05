@@ -1,5 +1,9 @@
-import { Client } from "@notionhq/client";
+import { Client, isFullBlock } from "@notionhq/client";
 import { NOTION_SECRET, NOTION_DATABASE_ID } from "@/config";
+import {
+  BlockObjectResponse,
+  PartialBlockObjectResponse,
+} from "@notionhq/client/build/src/api-endpoints";
 
 export const fetchFromNotion = async () => {
   const notionSecret = NOTION_SECRET;
@@ -31,5 +35,11 @@ export const fetchFromNotion = async () => {
   const blockChildData = await notion.blocks.children.list({
     block_id: pageId,
   });
-  return blockChildData.results.map((res) => res);
+
+  const blockChildDataStructured = blockChildData.results.map((res) => ({
+    id: res.id,
+    //@ts-ignore
+    image: res.image.file.url,
+  }));
+  return blockChildDataStructured;
 };
