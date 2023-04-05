@@ -1,5 +1,6 @@
 import { Client } from "@notionhq/client";
 import { NOTION_SECRET, NOTION_DATABASE_ID } from "@/config";
+
 export const fetchFromNotion = async () => {
   const notionSecret = NOTION_SECRET;
   const notionDatabaseId = NOTION_DATABASE_ID;

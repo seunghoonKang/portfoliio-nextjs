@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Suspense } from "react";
 import Loading from "./loading";
 import { fetchFromNotion } from "./route";
@@ -22,7 +21,7 @@ export default async function Projects() {
                   width={300}
                   height={300}
                   priority
-                  style={{ width: "auto", height: "auto" }}
+                  className="h-auto w-auto"
                 />
                 {/* <Link href={row.image.file.url}>d</Link> */}
               </div>

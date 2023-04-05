@@ -1,6 +1,6 @@
 "use client";
 import "./globals.css";
-import Nav from "../components/Nav";
+import Nav from "@/components/Nav";
 import { ThemeProvider } from "next-themes";
 
 export default function RootLayout({

@@ -1,5 +1,5 @@
 import { Noto_Sans } from "@next/font/google";
-import Introduce from "../components/Introduce";
+import Introduce from "@/components/Introduce";
 import Portfolio from "@/components/Portfolio";
 import About from "@/components/About";
 
