@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BsGithub, BsFillArrowUpRightCircleFill } from "react-icons/bs";
+
 export default function Portfolio() {
   interface Project {
     projectName: string;
@@ -21,7 +22,7 @@ export default function Portfolio() {
       period: "2023.03",
       image: "/cherryblossom.png",
       github: "https://github.com/Teo-Sprint-14th-1team/cherryblossom",
-      deploySite: "https://cherryblossom-ten.vercel.app/",
+      deploySite: "https://cherryblossom-ashy.vercel.app/",
       keyId: 1,
     },
     {
@@ -49,39 +50,44 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className=" mt-20">
       <div className=" my-12 pb-12 md:pt-16 md:pb-48">
-        <h1 className="text-center font-extrabold text-4xl mb-24">
+        <h1 className="mb-24 text-center text-4xl font-extrabold">
           포트폴리오
-          <hr className="w-10 h-1 mx-auto my-4 bg-cyan-500 border-0 rounded"></hr>
+          <hr className="mx-auto my-4 h-1 w-10 rounded border-0 bg-cyan-500"></hr>
         </h1>
         <div className="space-y-28">
           {projects.map((project) => (
             <div key={project.keyId} className="md:flex md:space-x-12 ">
-              <div className="md:w-1/2 ">
+              <div className="relative md:w-1/2 ">
                 <Link href={project.github}>
+                  <div className="absolute z-20 h-full w-full rounded-xl opacity-0 hover:bg-slate-700 hover:opacity-50">
+                    <p className=" absolute top-2/4 left-2/4 translate-x-[-50%] translate-y-[-50%] text-5xl font-extrabold md:text-3xl ">
+                      더 보기
+                    </p>
+                  </div>
                   <Image
                     src={project.image}
                     width={1000}
-                    height={1000}
+                    height={100}
                     alt="projectImage"
-                    className=" rounded-xl shadow-xl hover:opacity-30"
+                    className="rounded-xl shadow-xl"
                   />
                 </Link>
               </div>
-              <div className="md:flex-col md:w-1/2 space-y-3">
-                <h1 className="font-bold text-3xl">{project.projectName}</h1>
+              <div className="space-y-3 md:w-1/2 md:flex-col">
+                <h1 className="text-3xl font-bold">{project.projectName}</h1>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400">
                   {project.period}
                 </p>
                 <div className="flex flex-wrap gap-3">
                   {project.techStack.map((stack, key) => (
                     <div key={key}>
-                      <p className="text-sm border-solid border-2 rounded-xl pl-2 pr-2 hover:opacity-30 cursor-pointer">
+                      <p className="cursor-pointer rounded-xl border-2 border-solid pl-2 pr-2 text-sm hover:opacity-30">
                         {stack}
                       </p>
                     </div>
                   ))}
                 </div>
-                <p className="sm:text-lg md:text-sm leading-7 text-neutral-600 dark:text-neutral-400">
+                <p className="leading-7 text-neutral-600 dark:text-neutral-400 sm:text-lg md:text-sm">
                   {project.description}
                 </p>
                 <div className="mt-4 flex gap-5">
